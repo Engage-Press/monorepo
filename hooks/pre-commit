@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# This comes from the sample script - sets up a variable that's useful
+# for finding the correct point to diff against.
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+        against=HEAD
+else
+        # Initial commit: diff against an empty tree object
+        against=$(git hash-object -t tree /dev/null)
+fi
+
+# Redirect output to stderr.
+exec 1>&2
+
+# Shellcheck files
+
+# note that GNU xargs has undesirable behavior where it will still run
+# the shellcheck even if there's no files.  And the argument it takes
+# to behave posixly... isn't supported on posix.  sigh.  so, detect
+# for GNU xargs.
+
+nicexargs() {
+    if xargs --version | head -1 | grep -q GNU
+    then
+        xargs -r "$@"
+    else
+        xargs "$@"
+    fi
+}
+
+git diff-index --cached --name-only --diff-filter=d -z "$against" '*.sh' | nicexargs -0 shellcheck

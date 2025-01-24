@@ -1,0 +1,11 @@
+# Non-public files
+*.bak
+*-private
+*-draft
+img-src
+private.txt
+scratch
+
+# Output files
+*.pdf
+/output
