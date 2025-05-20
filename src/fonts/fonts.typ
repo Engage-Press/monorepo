@@ -19,6 +19,7 @@ Fonts in the repo are:
 / Cooper\*: An old-style display font, similar to the famous "Cooper Black", by Indestructible Type
 / Drafting Mono: A monospace, by Indestructible Type
 / EB Garamond: An old-style serif, based on Garamond, by Georg Mayr-Duffner
+/ Garamontio: Michele Casanova's updated version of EB Garamond. Cut into a static font by yours truly.
 / Hyde: A transitional serif, by Andrew Berry
 / Jost\*: A geometric sans, similar to Futura, by Indestructible Type
 / Rakkas: A display font with Arabic included, by Zeynep Akay
@@ -89,4 +90,21 @@ for "and").
     #lorem(30)
 
     _Dungeons & Dragons_
+
+    *Yelling is fun!*
+]
+
+=== Garamontio
+
+A Garamond based on EB Garamond. It's very similar, just has some
+slightly different kerning (more spaced-out in places) and a less
+dramatic italic.  Use it if you prefer it?  Mostly I just wanted to
+test cutting a static font from a variable one using my new script.
+
+#text(font: "Garamontio", )[
+    #lorem(30)
+
+    _Dungeons & Dragons_
+
+    *Yelling is fun!*
 ]
