@@ -11,6 +11,8 @@
 
 #set text(font: "Vollkorn", number-type: "lining", 9pt)
 
+#show link: underline
+
 = List of fonts
 
 Fonts in the repo are:
@@ -107,4 +109,18 @@ test cutting a static font from a variable one using my new script.
     _Dungeons & Dragons_
 
     *Yelling is fun!*
+]
+
+=== Alegreya & Alegreya Sans
+
+Found these #link("https://beautifulwebtype.com/alegreya/")[here] and
+#link("https://beautifulwebtype.com/alegreya-sans/")[here].  Very nice
+looking pair of humanist/caligraphic fonts.
+
+#text(font: "Alegreya", )[
+    #lorem(30)
+]
+
+#text(font: "Alegreya Sans", )[
+    #lorem(30)
 ]
