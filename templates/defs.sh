@@ -12,3 +12,8 @@ PROJNAME="%PROJNAME%"
 
 # Files to build. Relative to the top of the project directory ($PROJROOT)
 PROJFILES=()
+
+# Files to turn into booklets. You can just set it to PROJFILES by
+# uncommenting the first line and commenting the second below.
+# BOOKLETS=${PROJFILES[*]}
+BOOKLETS=()

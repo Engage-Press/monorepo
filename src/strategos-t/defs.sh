@@ -11,4 +11,7 @@ PROJROOT="/home/pippa/writing/monorepo/src/strategos-t"
 PROJNAME="strategos-t"
 
 # Files to build. Relative to the top of the project directory ($PROJROOT)
-PROJFILES=()
+PROJFILES=(rules.typ)
+
+# Files to turn into booklets. You can just set it to PROJFILES.
+BOOKLETS=${PROJFILES[*]}

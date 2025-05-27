@@ -46,6 +46,7 @@ fi
 (
     cd "$PROJROOT" || exit 1
     declare -a PROJFILES
+    declare -a BOOKLETS
     # shellcheck disable=SC1091
     source "defs.sh"
 
@@ -56,5 +57,14 @@ fi
     do
         bn="$(basename -s.typ "$file")"
         "${GITROOT}/typst.sh" compile "$file" "${OUTDIR}/${bn}.pdf"
+    done
+
+    for file in "${BOOKLETS[@]}"
+    do
+        bn="$(basename -s.typ "$file")"
+        (
+            cd "${OUTDIR}" || exit 1
+            pdfbook2 --paper=letterpaper -n -s "$bn.pdf"
+        )
     done
 )
