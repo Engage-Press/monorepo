@@ -150,6 +150,7 @@ document or book.
 / Garamontio: Michele Casanova's updated version of EB Garamond. Cut into a static font by yours truly.
 / Hyde: A transitional serif, by Andrew Berry
 / Jost\*: A geometric sans, similar to Futura, by Indestructible Type
+/ Libre Clarendon: A slab-serif, by Impallari Type
 / Vollkorn: A transitional serif, by Friedrich Althausen et al.
 
 I'm considering including Coelacanth, but that's under active
@@ -232,4 +233,26 @@ looking pair of humanist/caligraphic fonts.
 
 #text(font: "Alegreya Sans", )[
     #lorem(30)
+]
+
+== Libre Clarendon
+
+A slab-serif. Very similar to Besley (based on the same root font,
+Clarendon) but has 5 weights and 4 widths.
+
+#text(font: "Libre Clarendon", 10pt)[
+    #lorem(30)
+
+    `#text(weight: x ):`#h(1fr)
+    #text(weight: "light", "light")#h(1em)
+    #text(weight: "regular", "regular")#h(1em)
+    #text(weight: "medium", "medium")#h(1em)
+    #text(weight: "bold", "bold")#h(1em)
+    #text(weight: "black", "black")\
+    `#text(stretch: x ):`#h(1fr)
+    #text(stretch: 75%)[75% (Foobar)]
+    #text(stretch: 87%)[87% (Foobar)]
+    #text(stretch: 100%)[100% (Foobar)]
+
+    #align(center, text(font: "Libre Clarendon Wide")[Using alt font name: Libre Clarendon Wide])
 ]
