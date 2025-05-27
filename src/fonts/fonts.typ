@@ -23,6 +23,7 @@ Display fonts should be used for titles, logos, etc.
 
 / Combat: A display serif, by Martin Desinde for Velvetyne
 / Cooper\*: An old-style display font, similar to the famous "Cooper Black", by Indestructible Type
+/ Honoria: A swash serif by Luzius Thöny
 / Ouroboros: A display font, by Ariel Martín Pérez for Velvetyne
 / Rakkas: A display font with Arabic included, by Zeynep Akay
 
@@ -57,6 +58,42 @@ used here).
         Da Rulez
 
         DUNGEONS & DRAGONS
+    ]
+]
+
+#pagebreak()
+
+== Honoria
+
+Swash serif, with special glyphs:
+
+#table(
+    columns: 3,
+    table.header(
+        [Feature],
+        [Variant],
+        [Glyphs]
+    ),
+    [swsh], [variants with curls, tails or long legs], [A C G K N R S X Z],
+    [cv01], [swirl on the left], [B D E F H K L M N P R U V W Y],
+    [cv02], [swirl on the right], [K M N U V W X Y],
+    [cv03], [swirl on the left and long leg], [K N R],
+    [cv04], [extra long swirly leg], [R],
+)
+
+#let swsh(txt) = text(features: ("swsh",), txt)
+#let cv01(txt) = text(features: ("cv01",), txt)
+#let cv02(txt) = text(features: ("cv02",), txt)
+#let cv03(txt) = text(features: ("cv03",), txt)
+#let cv04(txt) = text(features: ("cv04",), txt)
+
+#align(center)[
+    #text(font: "Honoria", size: 48pt)[
+        Honoria
+
+        #cv01("N")ever say #cv03("n")eve#cv04("r")
+
+        #swsh("S")t#cv03("r")ategos
     ]
 ]
 
