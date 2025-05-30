@@ -908,12 +908,13 @@ equivalent FP.
 
 == Barkerese Units
 
-Using rules not unlike those in Phil Barker's _De Bellis Antiquatatis_ or
-_Hordes of the Things,_ an army can be built from *units* (each representing a
-company, batallion, or regiment of troops; or, a few heroes and their
-retainers).  One has a number of Army Points (AP) to spend, 24 as standard; and
-the units one can buy are as follows (with the caveat that at least half the
-total AP must consist of 2 AP or 1 AP units):
+Using rules not unlike those in Phil Barker's _De Bellis Antiquatatis_
+or _Hordes of the Things,_ an army can be built from *units* (each
+representing a battalion or small regiment of troops; or, a few heroes
+and their retainers).  One has a number of Army Points (AP) to spend,
+24 as standard; and the units one can buy are as follows (with the
+caveat that at least half the total AP must consist of 2 AP or 1 AP
+units):
 
 #table(
     columns: 4,
