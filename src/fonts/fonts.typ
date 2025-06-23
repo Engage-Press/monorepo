@@ -152,6 +152,7 @@ document or book.
 / Jost\*: A geometric sans, similar to Futura, by Indestructible Type
 / Libre Clarendon: A slab-serif, by Impallari Type
 / Vollkorn: A transitional serif, by Friedrich Althausen et al.
+/ IBM Plex: Paired fonts, a grotesk serif and a humanist sans.
 
 I'm considering including Coelacanth, but that's under active
 development right now.
@@ -255,4 +256,148 @@ Clarendon) but has 5 weights and 4 widths.
     #text(stretch: 100%)[100% (Foobar)]
 
     #align(center, text(font: "Libre Clarendon Wide")[Using alt font name: Libre Clarendon Wide])
+]
+
+== IBM Plex
+
+IBM's corporate typefaces,
+#link("https://www.ibm.com/plex/concept/")[IBM Plex Sans] and
+#link("")[IBM Plex Serif].  The sans is a grotesk, inspired by Helvetica:
+
+#text(font: "IBM Plex Sans", )[
+    #lorem(30)
+]
+
+The serif is a transitional with modern characteristics, like Bodoni
+but with aspects from Janson:
+
+#text(font: "IBM Plex Serif", )[
+    #lorem(30)
+]
+
+= Monospace Fonts
+
+Monospace fonts are the same width for every glyph, unlike a
+proportional font where glyph widths may vary. Compare IBM Plex Sans &
+IBM Plex Mono:
+
+- #text(font: "IBM Plex Sans", )[Antidisestablishmentarianism]
+- #text(font: "IBM Plex Mono", )[Antidisestablishmentarianism]
+
+These fonts are used in a few scenarios:
+
+1. Traditionally, for computer terminals and thus for text editors &
+   source code.
+2. Screenplays are as standard written in
+   "#link("https://en.wikipedia.org/wiki/Screenplay#Format_and_style")[12
+   point, 10 pitch Courier]"; the standardized size allows (roughly)
+   one page of text to equal one minute of screen time.
+3. Most mechanical typewriters and dot-matrix printers use or used
+   monospace fonts as they are simpler to implement.
+
+The use is thus quite limited for typesetting:
+
+1. For verisimilitude when depicting typewritten or older printed text.
+2. For accurately displaying ASCII art and indented source code.
+3. For using a typesetting tool to write screenplays.
+
+/ IBM Plex Mono: IBM's corporate monospace, fairly neutral with a
+  grotesk character.
+/ TT2020: Verisimilar typewriter font.
+
+#pagebreak()
+
+== IBM Plex Mono
+
+IBM's corporate monospace. In their own words:
+
+#quote(block: true)[
+    ...a neutral yet friendly Grotesque style typeface that
+    balances design with the engineered details that make Plex distinctly
+    IBM.
+]
+
+It's closer to a Sans than Courier; it looks most similar of course to
+IBM Plex Sans.
+
+#show raw: it => block(
+  text(font: "IBM Plex Mono", 9pt, it)
+)
+
+#text(font: "IBM Plex Mono", )[
+    #lorem(30)
+]
+
+```c
+#include <stdio.h>
+
+int main(char **args) {
+        for (int i = 0; i < 10; i++) {
+                printf("%d...\n", i);
+        }
+        printf("%s\n", "Hello World!");
+        return 0;
+}
+
+/*
+ * Characters that can be ambiguous in bad programming fonts:
+ *
+ *   iIlL|1   ({[<>]})   @0Oo   `'"
+ */
+
+/*
+ * "See no evil - hear no evil - talk no evil" by Morfina
+ *
+ *     _.-._         ..-..         _.-._
+ *    (_-.-_)       /|'.'|\       (_'.'_)
+ *  mrf.\-/.        \)\-/(/        ,-.-.
+ *  __/ /-. \__   __/ ' ' \__   __/'-'-'\__
+ * ( (___/___) ) ( (_/-._\_) ) ( (_/   \_) )
+ *  '.Oo___oO.'   '.Oo___oO.'   '.Oo___oO.'
+ */
+```
+
+#pagebreak()
+
+== TT2020
+
+A highly verisimilar typewriter font.  Replicates the "grodiness" of a
+beat-up typewriter low on ink without obviously repeating glyphs.
+Check out the #link("https://copypaste.wtf/TT2020/")[homepage] for
+more information.
+
+_Font "TT2020Base":_
+
+#text(font: "TT2020Base")[
+    Sphinx of black quartz, judge my vow! EEEEEEEE
+]
+
+_Font "TT2020 Style B":_
+
+#text(font: "TT2020 Style B")[
+    Sphinx of black quartz, judge my vow! EEEEEEEE
+]
+
+_Font "TT2020 Style D":_
+
+#text(font: "TT2020 Style D")[
+    Sphinx of black quartz, judge my vow! EEEEEEEE
+]
+
+_Font "TT2020 Style E":_
+
+#text(font: "TT2020 Style E")[
+    Sphinx of black quartz, judge my vow! EEEEEEEE
+]
+
+_Font "TT2020 Style F (ASCII)":_
+
+#text(font: "TT2020 Style F (ASCII)")[
+    Sphinx of black quartz, judge my vow! EEEEEEEE
+]
+
+_Font "TT2020 Style G (ASCII)":_
+
+#text(font: "TT2020 Style G (ASCII)")[
+    Sphinx of black quartz, judge my vow! EEEEEEEE
 ]

@@ -6,7 +6,7 @@ GITROOT="$(git rev-parse --show-toplevel)"
 # the Unix-like :
 SEP=":"
 
-FONTPATH="${GITROOT}/fonts${SEP}${GITROOT}/fonts/display${SEP}${GITROOT}/fonts-private"
+FONTPATH="${GITROOT}/fonts${SEP}${GITROOT}/fonts/monospace${SEP}${GITROOT}/fonts/display${SEP}${GITROOT}/fonts-private"
 PKGPATH="${GITROOT}/common"
 
 subcmd="$1"
