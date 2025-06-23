@@ -6,7 +6,7 @@
 #set page(
     numbering: "1/1",
     paper: "us-statement",
-    margin: 1cm, //(x: 1cm, bottom: 1.75cm, top: 1cm),
+    margin: (x: 1cm, bottom: 1.75cm, top: 1cm),
 )
 
 #set text(font: "Vollkorn", number-type: "lining", 9pt)
@@ -23,7 +23,9 @@ Display fonts should be used for titles, logos, etc.
 
 / Combat: A display serif, by Martin Desinde for Velvetyne
 / Cooper\*: An old-style display font, similar to the famous "Cooper Black", by Indestructible Type
+/ Hexagothic: A unique hexagonal Gothic, both futuristic and fantastic
 / Honoria: A swash serif by Luzius Thöny
+/ Old Cupboard: A handwritten take on EB Garamond
 / Ouroboros: A display font, by Ariel Martín Pérez for Velvetyne
 / Rakkas: A display font with Arabic included, by Zeynep Akay
 
@@ -58,6 +60,24 @@ used here).
         Da Rulez
 
         DUNGEONS & DRAGONS
+    ]
+]
+
+#pagebreak()
+
+== Hexagothic
+
+A hexagon-shaped display font. It has a unique blend of sci-fi and fantasy.
+
+By setting the weight to 100, the contrast is constant, giving a
+sleek, futuristic feeling; by setting it to 900, dramatic differences
+in contrast give the font the feeling of a gothic or blackletter.
+
+#align(center)[
+    #text(font: "Hexagothic", size: 48pt)[
+        Hexagothic Light (weight 100)
+
+        #text(weight: 900)[Hexagothic Display (weight 900)]
     ]
 ]
 
@@ -115,6 +135,44 @@ Black weight, Arabesque feel.
 
     ]
 ]
+
+#pagebreak()
+
+== Old Cupboard
+
+A handwritten EB Garamond. Per the author:
+
+#quote(block: true)[
+    Old Cupboard is an OpenType Font made by hand in the style of EB
+    Garamond. It takes advantage of an OpenType feature that allows
+    glyphs to swap conditionally, giving the font an appearance of
+    being handwritten while not repeating the same characters over and
+    over!
+
+    Old Cupboard is a display font, which means it’s best used for
+    titles and headers. You will want to adjust the kerning (the space
+    between letters) and word spacing, but after some toying around
+    you should have something very cozy and warm to look at.
+
+    Old Cupboard is a hand-written version of EB Garamond by Octavio
+    Pardo and Georg Duffner and pairs very nice with that great font,
+    but you’ll find that it doesn’t pair so nicely with sans serif
+    fonts. It also works fantastically as dropped capital letters,
+    leading into a paragraph!
+
+]
+
+#align(center)[
+    #text(font: "Old Cupboard", size: 48pt)[
+        Auld Cupboard
+
+        Dungeons & Dragons
+
+        So mote it be...
+    ]
+]
+
+
 
 #pagebreak()
 
@@ -235,6 +293,8 @@ looking pair of humanist/caligraphic fonts.
 #text(font: "Alegreya Sans", )[
     #lorem(30)
 ]
+
+#pagebreak()
 
 == Libre Clarendon
 
