@@ -13,6 +13,37 @@
 
 #show link: underline
 
+#let codeExample = [
+```c
+#include <stdio.h>
+
+int main(char **args) {
+        for (int i = 0; i < 10; i++) {
+                printf("%d...\n", i);
+        }
+        printf("%s\n", "Hello World!");
+        return 0;
+}
+
+/*
+ * Characters that can be ambiguous in bad programming fonts:
+ *
+ *   iIlL|1   ({[<>]})   @0Oo   `'"
+ */
+
+/*
+ * "See no evil - hear no evil - talk no evil" by Morfina
+ *
+ *     _.-._         ..-..         _.-._
+ *    (_-.-_)       /|'.'|\       (_'.'_)
+ *  mrf.\-/.        \)\-/(/        ,-.-.
+ *  __/ /-. \__   __/ ' ' \__   __/'-'-'\__
+ * ( (___/___) ) ( (_/-._\_) ) ( (_/   \_) )
+ *  '.Oo___oO.'   '.Oo___oO.'   '.Oo___oO.'
+ */
+```
+]
+
 #outline()
 
 #pagebreak()
@@ -280,22 +311,6 @@ test cutting a static font from a variable one using my new script.
     *Yelling is fun!*
 ]
 
-== Alegreya & Alegreya Sans
-
-Found these #link("https://beautifulwebtype.com/alegreya/")[here] and
-#link("https://beautifulwebtype.com/alegreya-sans/")[here].  Very nice
-looking pair of humanist/caligraphic fonts.
-
-#text(font: "Alegreya", )[
-    #lorem(30)
-]
-
-#text(font: "Alegreya Sans", )[
-    #lorem(30)
-]
-
-#pagebreak()
-
 == Libre Clarendon
 
 A slab-serif. Very similar to Besley (based on the same root font,
@@ -316,6 +331,22 @@ Clarendon) but has 5 weights and 4 widths.
     #text(stretch: 100%)[100% (Foobar)]
 
     #align(center, text(font: "Libre Clarendon Wide")[Using alt font name: Libre Clarendon Wide])
+]
+
+#pagebreak()
+
+== Alegreya & Alegreya Sans
+
+Found these #link("https://beautifulwebtype.com/alegreya/")[here] and
+#link("https://beautifulwebtype.com/alegreya-sans/")[here].  Very nice
+looking pair of humanist/caligraphic fonts.
+
+#text(font: "Alegreya", )[
+    #lorem(30)
+]
+
+#text(font: "Alegreya Sans", )[
+    #lorem(30)
 ]
 
 == IBM Plex
@@ -364,6 +395,7 @@ The use is thus quite limited for typesetting:
 / IBM Plex Mono: IBM's corporate monospace, fairly neutral with a
   grotesk character.
 / TT2020: Verisimilar typewriter font.
+/ Courier Prime: A libre Courier.
 
 #pagebreak()
 
@@ -380,42 +412,11 @@ IBM's corporate monospace. In their own words:
 It's closer to a Sans than Courier; it looks most similar of course to
 IBM Plex Sans.
 
-#show raw: it => block(
-  text(font: "IBM Plex Mono", 9pt, it)
-)
-
 #text(font: "IBM Plex Mono", )[
     #lorem(30)
 ]
 
-```c
-#include <stdio.h>
-
-int main(char **args) {
-        for (int i = 0; i < 10; i++) {
-                printf("%d...\n", i);
-        }
-        printf("%s\n", "Hello World!");
-        return 0;
-}
-
-/*
- * Characters that can be ambiguous in bad programming fonts:
- *
- *   iIlL|1   ({[<>]})   @0Oo   `'"
- */
-
-/*
- * "See no evil - hear no evil - talk no evil" by Morfina
- *
- *     _.-._         ..-..         _.-._
- *    (_-.-_)       /|'.'|\       (_'.'_)
- *  mrf.\-/.        \)\-/(/        ,-.-.
- *  __/ /-. \__   __/ ' ' \__   __/'-'-'\__
- * ( (___/___) ) ( (_/-._\_) ) ( (_/   \_) )
- *  '.Oo___oO.'   '.Oo___oO.'   '.Oo___oO.'
- */
-```
+#text(font: "IBM Plex Mono", 11pt, codeExample)
 
 #pagebreak()
 
@@ -461,3 +462,23 @@ _Font "TT2020 Style G (ASCII)":_
 #text(font: "TT2020 Style G (ASCII)")[
     Sphinx of black quartz, judge my vow! EEEEEEEE
 ]
+
+#text(font: "TT2020 Style F (ASCII)", )[
+    #lorem(69)
+]
+
+#pagebreak()
+
+== Courier Prime
+
+A high-quality, libre Courier.  Comes in classic, Sans, and Code cuts.
+
+#text(font: "Courier Prime", )[
+    #lorem(30)
+]
+
+#text(font: "Courier Prime Sans", )[
+    #lorem(30)
+]
+
+#text(font: "Courier Prime Code", 11pt, codeExample)
