@@ -1,0 +1,16 @@
+[package]
+name = "LibEngage"
+version = "1.0.0"
+compiler = "0.13.1"
+repository = "https://github.com/Engage-Press/monorepo"
+homepage = "https://super.seekrit.club/"
+entrypoint = "lib.typ"
+authors = [
+  "japanoise <https://github.com/japanoise>",
+  "Engage Press staff <https://github.com/Engage-Press>"
+]
+categories = [ ]
+license = "GPL-3.0-or-later"
+description = "Common templates &c. for Engage Press releases."
+keywords = [ ]
+exclude = [ "/gallery/*", "manual.pdf", "manual.typ", "manual.sh" ]
