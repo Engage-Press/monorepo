@@ -1,11 +1,13 @@
-#import "@local/LibEngage:1.0.0": engage-doc
+#import "@local/LibEngage:1.0.0": meta
 
-#show: doc => engage-doc.engageDoc(
+#show: doc => meta.engageDoc(
     author: "H. G. Wells",
     font-size: 12pt,
     "Little Wars (Kriegsspiel Appendix)",
     doc
 )
+
+#set page(numbering: "1/1")
 
 #align(center)[
     #text(font: "Rakkas", 32pt)[LITTLE WARS]

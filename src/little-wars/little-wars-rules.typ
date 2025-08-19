@@ -1,6 +1,6 @@
-#import "@local/LibEngage:1.0.0": engage-doc
+#import "@local/LibEngage:1.0.0": meta
 
-#show: doc => engage-doc.engageDoc(
+#show: doc => meta.engageDoc(
     author: "H. G. Wells",
     font-size: 10pt,
     "Little Wars (Rules)",

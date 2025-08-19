@@ -1,4 +1,4 @@
-#import "engage-doc.typ": engageDoc, fourRowColors, sixRowColors, repeatingStripesFill
+#import "meta.typ": engageDoc, fourRowColors, sixRowColors, repeatingStripesFill
 #import "shapes.typ": arrow, ship
 #import "typography.typ": frac, swsh, cv01, cv02, cv03, cv04
 #import "units.typ": feet, inches, feet-inches
@@ -34,15 +34,15 @@ If using the package:
 
 ```typst
 // With prefixes
-#import "@local/LibEngage:1.0.0": engage-doc, shapes, typography, units
+#import "@local/LibEngage:1.0.0": meta, shapes, typography, units
 
 // e.g.
-#engage-doc.engageDoc(/* ... */)
+#meta.engageDoc(/* ... */)
 
 // Without prefixes
 #import "@local/LibEngage:1.0.0": engage-doc, shapes, typography, units
 
-#import engage-doc: engageDoc, fourRowColors, sixRowColors, repeatingStripesFill
+#import meta: engageDoc, fourRowColors, sixRowColors, repeatingStripesFill
 #import shapes: arrow, ship
 #import typography: frac, swsh, cv01, cv02, cv03, cv04
 #import units: feet, inches, feet-inches
@@ -54,7 +54,7 @@ If using the package:
 If copying the typst files into the directory:
 
 ```typst
-#import "engage-doc.typ": engageDoc, fourRowColors, sixRowColors, repeatingStripesFill
+#import "meta.typ": engageDoc, fourRowColors, sixRowColors, repeatingStripesFill
 #import "shapes.typ": arrow, ship
 #import "typography.typ": frac, swsh, cv01, cv02, cv03, cv04
 #import "units.typ": feet, inches, feet-inches
