@@ -40,7 +40,7 @@ If using the package:
 #meta.engageDoc(/* ... */)
 
 // Without prefixes
-#import "@local/LibEngage:1.0.0": engage-doc, shapes, typography, units
+#import "@local/LibEngage:1.0.0": meta, shapes, typography, units
 
 #import meta: engageDoc, engageBook, fourRowColors, sixRowColors, repeatingStripesFill
 #import shapes: arrow, ship
