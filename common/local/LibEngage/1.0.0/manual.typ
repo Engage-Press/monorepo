@@ -42,7 +42,7 @@ If using the package:
 // Without prefixes
 #import "@local/LibEngage:1.0.0": engage-doc, shapes, typography, units
 
-#import meta: engageDoc, fourRowColors, sixRowColors, repeatingStripesFill
+#import meta: engageDoc, engageBook, fourRowColors, sixRowColors, repeatingStripesFill
 #import shapes: arrow, ship
 #import typography: frac, swsh, cv01, cv02, cv03, cv04
 #import units: feet, inches, feet-inches
@@ -54,7 +54,7 @@ If using the package:
 If copying the typst files into the directory:
 
 ```typst
-#import "meta.typ": engageDoc, fourRowColors, sixRowColors, repeatingStripesFill
+#import "meta.typ": engageDoc, engageBook, fourRowColors, sixRowColors, repeatingStripesFill
 #import "shapes.typ": arrow, ship
 #import "typography.typ": frac, swsh, cv01, cv02, cv03, cv04
 #import "units.typ": feet, inches, feet-inches
@@ -95,7 +95,37 @@ you're looking at it, buster!
 )
 ```
 
-#v(48em)
+== EngageBook — Book Format
+
+A superset of EngageDoc that formats the document like a book(let). Takes a
+number of optional arguments.
+
+```typst
+#engageBook(
+    paper-size: "us-statement",
+    body-font: "Alegreya",
+    heading-font: "Alegreya Sans",
+    number-type: "lining",
+    author: "japanoise",
+    margin: 2cm,
+    font-size: 10pt,
+    cover: none,
+    title-page: none,
+    show-toc: true,
+    first-page: 2,
+    toc-extra: [],
+    title,
+    doc,
+)
+```
+
+/ cover: Set this to some content to display it on the cover page. Otherwise, generate a boring cover.
+/ title-page: Set this to some content to display it after the cover but before the table of contents & main content
+/ first-page: The number that the first page after the table of contents will be labelled as.
+/ show-toc: Set this to false to hide the table of contents
+/ toc-extra: Extra content below the table of contents proper
+
+#v(2em)
 
 == Table Stripes
 

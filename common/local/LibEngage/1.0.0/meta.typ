@@ -45,3 +45,89 @@
 
     doc
 }
+
+#let engageBook(
+    paper-size: "us-statement",
+    body-font: "Alegreya",
+    heading-font: "Alegreya Sans",
+    number-type: "lining",
+    author: "japanoise",
+    margin: 2cm,
+    font-size: 10pt,
+    cover: none,
+    title-page: none,
+    show-toc: true,
+    first-page: 2,
+    toc-extra: [],
+    title,
+    doc,
+) = {
+    // Generate a shitty placeholder cover if none provided
+    let actual-cover = if (cover == none) [
+        #place(
+            left+top,
+            dy: 1em,
+            text(font: heading-font, 32pt, title)
+        )
+        #place(
+            right+bottom,
+            dy: -1em,
+            text(font: heading-font, 16pt, author)
+        )
+    ] else { cover }
+
+    // Show the title page, if provided
+    let actual-title-page = if (title-page == none) [
+    ] else [
+        #pagebreak()
+        #title-page
+        #pagebreak()
+    ]
+
+    let toc-page = if (show-toc) [
+        #columns(2)[
+            #outline()
+            #toc-extra
+        ]
+        #pagebreak()
+    ] else []
+
+    engageDoc(
+        paper-size: paper-size,
+        body-font: body-font,
+        heading-font: heading-font,
+        number-type: number-type,
+        author: author,
+        margin: margin,
+        font-size: font-size,
+        title,
+        [
+            #actual-cover
+            #pagebreak()
+
+            #actual-title-page
+            #pagebreak()
+
+            #toc-page
+            #counter(page).update(first-page)
+
+            #set page(
+                footer: context {
+                    if (calc.rem(counter(page).get().first(), 2) == 0) [
+                        #counter(page).display(
+                            "1"
+                        )
+                        #h(1fr)
+                    ] else [
+                        #h(1fr)
+                        #counter(page).display(
+                            "1"
+                        )
+                    ]
+                }
+            )
+
+            #doc
+        ]
+    )
+}
