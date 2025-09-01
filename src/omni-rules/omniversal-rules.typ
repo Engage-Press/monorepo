@@ -80,7 +80,7 @@
             [3], [-1 disruption], [—], [Minor wound], [Major wound],
             [4], [-1 disruption OR extra roll], [—], [—], [Minor wound],
             [5], [-1 disruption OR extra roll], [—], [—], [—],
-            [5], [-2 disruption OR 2 extra rolls], [—], [—], [—],
+            [6], [-2 disruption OR 2 extra rolls], [—], [—], [—],
 
         )
     )<vips>
