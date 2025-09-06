@@ -52,3 +52,176 @@
     #place(center+horizon, dx: -sailPos, line(
         stroke: stroke, angle: 90deg, length: sailPos))
 ]
+
+#let dice(
+    stroke: black+1pt,
+    fill: white,
+    pips: black,
+    size: 4em,
+    sides
+) = {
+
+    let pipsize = size/10
+
+    let topleft = if (sides == 1) {
+        none
+    } else {
+        pips
+    }
+
+    // Not used
+    let topcenter = none
+
+    let topright = if (sides == 6 or sides == 4 or sides == 5) {
+        pips
+    } else {
+        none
+    }
+
+    let centerleft = if (sides == 6) {
+        pips
+    } else {
+        none
+    }
+
+    let centerpip = if (sides == 2 or sides == 4 or sides == 6) {
+        none
+    } else {
+        pips
+    }
+
+    let centerright = if (sides == 6) {
+        pips
+    } else {
+        none
+    }
+
+    let botleft = if (sides == 6 or sides == 4 or sides == 5) {
+        pips
+    } else {
+        none
+    }
+
+    // Not used
+    let botcenter = none
+
+    let botright = if (sides == 1) {
+        none
+    } else {
+        pips
+    }
+
+    block(
+        [
+            // Dice body
+            #square(
+                size: size,
+                stroke: stroke,
+                fill: fill,
+                radius: size/8,
+            )
+
+            // Center pip
+            #place(
+                center+horizon,
+                circle(
+                    stroke: none,
+                    fill: centerpip,
+                    radius: pipsize
+                )
+            )
+
+            // top center pip
+            #place(
+                dy: pipsize,
+                center+top,
+                circle(
+                    stroke: none,
+                    fill: topcenter,
+                    radius: pipsize
+                )
+            )
+
+            // bottom center pip
+            #place(
+                dy: -pipsize,
+                center+bottom,
+                circle(
+                    stroke: none,
+                    fill: botcenter,
+                    radius: pipsize
+                )
+            )
+
+            // top left
+            #place(
+                dx: pipsize,
+                dy: pipsize,
+                left+top,
+                circle(
+                    stroke: none,
+                    fill: topleft,
+                    radius: pipsize
+                )
+            )
+
+            // center left
+            #place(
+                dx: pipsize,
+                left+horizon,
+                circle(
+                    stroke: none,
+                    fill: centerleft,
+                    radius: pipsize
+                )
+            )
+
+            // bottom left
+            #place(
+                dx: pipsize,
+                dy: -pipsize,
+                left+bottom,
+                circle(
+                    stroke: none,
+                    fill: botleft,
+                    radius: pipsize
+                )
+            )
+
+            // top right
+            #place(
+                dx: -pipsize,
+                dy: pipsize,
+                right+top,
+                circle(
+                    stroke: none,
+                    fill: topright,
+                    radius: pipsize
+                )
+            )
+
+            // center right
+            #place(
+                dx: -pipsize,
+                right+horizon,
+                circle(
+                    stroke: none,
+                    fill: centerright,
+                    radius: pipsize
+                )
+            )
+
+            // bottom right
+            #place(
+                dx: -pipsize,
+                dy: -pipsize,
+                right+bottom,
+                circle(
+                    stroke: none,
+                    fill: botright,
+                    radius: pipsize
+                )
+            )
+        ]
+    )
+}

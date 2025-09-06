@@ -1,5 +1,5 @@
 #import "meta.typ": engageDoc, fourRowColors, sixRowColors, repeatingStripesFill
-#import "shapes.typ": arrow, ship
+#import "shapes.typ": arrow, ship, dice
 #import "typography.typ": frac, swsh, cv01, cv02, cv03, cv04
 #import "units.typ": feet, inches, feet-inches
 
@@ -43,7 +43,7 @@ If using the package:
 #import "@local/LibEngage:1.0.0": meta, shapes, typography, units
 
 #import meta: engageDoc, engageBook, fourRowColors, sixRowColors, repeatingStripesFill
-#import shapes: arrow, ship
+#import shapes: arrow, ship, dice
 #import typography: frac, swsh, cv01, cv02, cv03, cv04
 #import units: feet, inches, feet-inches
 
@@ -55,7 +55,7 @@ If copying the typst files into the directory:
 
 ```typst
 #import "meta.typ": engageDoc, engageBook, fourRowColors, sixRowColors, repeatingStripesFill
-#import "shapes.typ": arrow, ship
+#import "shapes.typ": arrow, ship, dice
 #import "typography.typ": frac, swsh, cv01, cv02, cv03, cv04
 #import "units.typ": feet, inches, feet-inches
 ```
@@ -253,6 +253,44 @@ sets the size of the ship — higher is smaller.
     raw(lang: "typst",
         "#ship(stroke: 5pt+green,\n      fill: red,\n      gauge: 1)"),
     ship(stroke: 5pt+green, fill: red, gauge: 1),
+)
+
+== Dice
+
+A six-sided dice with customizable colors.
+
+```typst
+#let dice(
+    stroke: black+1pt,
+    fill: white,
+    pips: black,
+    size: 4em,
+    sides
+)
+```
+
+#grid(
+    gutter: 1em,
+    columns: 4,
+    align: (left+horizon, center+horizon),
+
+    raw(lang: "typst", "#dice(5)"),
+    dice(5),
+
+    raw(lang: "typst", "#dice(size: 2em, 6)"),
+    dice(size: 2em, 6),
+
+    grid.cell(
+        colspan: 2,
+        raw(lang: "typst",
+            "#dice(size: 3em,\n      stroke: red+2pt,\n      pips: blue,\n      fill: green, 3)"),
+    ),
+
+    grid.cell(
+        align: center+horizon,
+        colspan: 2,
+        dice(size: 3em, stroke: red+2pt, pips: blue, fill: green, 3)
+    )
 )
 
 = Typography
