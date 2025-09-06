@@ -9,3 +9,7 @@
   Victorian.
 - `little-wars`: Micro-projects related to H.G. Wells' Little Wars.  Based on
   the [Project Gutenberg](https://www.gutenberg.org/ebooks/3691) text.
+- `matrix`: My spin on the core Matrix Game rules.  Matrix Games were invented
+  by Chris Engle — see more at the [Matrix Games Wiki][mgwiki]
+
+[mgwiki]: https://www.ludism.org/mgwiki/HomePage
