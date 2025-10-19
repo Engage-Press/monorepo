@@ -12,6 +12,9 @@
 - `matrix`: My spin on the core Matrix Game rules.  Matrix Games were invented
   by Chris Engle — see more at the [Matrix Games Wiki][mgwiki]
 - `counters`: Wargaming counters inspired by [War Without Minis][wgwminis]
+- `lusy`: My LUSY skirmish rules, based on Featherstone's Close Wars &
+  Man Of Tin's [Close Little Wars][clw]
 
 [mgwiki]: https://www.ludism.org/mgwiki/HomePage
 [wgwminis]: https://warwithoutminis.blogspot.com/
+[clw]: https://manoftinblog.wordpress.com/2016/06/09/close-little-wars-featherstones-simplest-rules/
