@@ -14,6 +14,8 @@
 - `counters`: Wargaming counters inspired by [War Without Minis][wgwminis]
 - `lusy`: My LUSY skirmish rules, based on Featherstone's Close Wars &
   Man Of Tin's [Close Little Wars][clw]
+- `blackmoor-combat`: An attempt to reconstruct the combat system from
+  Dave Arneson's "Blackmoor" campaign, the lost rules that lead to D&D.
 
 [mgwiki]: https://www.ludism.org/mgwiki/HomePage
 [wgwminis]: https://warwithoutminis.blogspot.com/
