@@ -25,6 +25,37 @@
     )
 }
 
+#let double-arrow(
+    fill: none,
+    stroke: 1pt+black,
+    headWidth,
+    headHeight,
+    shaftWidth,
+    shaftHeight
+) = {
+    let arCenter = headWidth / 2
+    let shaftAncLeft = (headWidth - shaftWidth)/2
+    let shaftAncRight = shaftAncLeft + shaftWidth
+    let arBottom = headHeight + shaftHeight
+    let botHeadY = arBottom + headHeight
+
+    curve(
+        fill: fill,
+        stroke: stroke,
+        curve.move((arCenter, 0pt)),
+        curve.line((0pt, headHeight)),
+        curve.line((shaftAncLeft, headHeight)),
+        curve.line((shaftAncLeft, arBottom)),
+        curve.line((0pt, arBottom)),
+        curve.line((arCenter, botHeadY)),
+        curve.line((headWidth, arBottom)),
+        curve.line((shaftAncRight, arBottom)),
+        curve.line((shaftAncRight, headHeight)),
+        curve.line((headWidth, headHeight)),
+        curve.line((arCenter, 0pt)),
+    )
+}
+
 #let ship(
     fill: gray,
     stroke: 1pt+black,

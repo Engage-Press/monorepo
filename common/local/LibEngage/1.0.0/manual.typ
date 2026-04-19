@@ -1,5 +1,5 @@
 #import "meta.typ": engageDoc, fourRowColors, sixRowColors, repeatingStripesFill
-#import "shapes.typ": arrow, ship, dice
+#import "shapes.typ": arrow, double-arrow, ship, dice
 #import "typography.typ": frac, swsh, cv01, cv02, cv03, cv04
 #import "units.typ": feet, inches, feet-inches
 
@@ -228,6 +228,38 @@ than the shaft width to avoid distortion.
     arrow(fill: green, stroke: none, 30pt, 15pt, 10pt, 15pt),
 )
 
+== Double Arrow
+
+The same as `arrow`, but with heads on either end of the shaft.
+
+```typst
+#double-arrow(
+    fill: none,
+    stroke: 1pt+black,
+    headWidth,
+    headHeight,
+    shaftWidth,
+    shaftHeight
+)
+```
+
+== Examples
+
+#grid(
+    row-gutter: 1em,
+    columns: (1fr, 1fr),
+    align: (left, center+horizon),
+
+    raw(lang: "typst", "#double-arrow(\n\t10pt, 5pt,\n\t5pt, 5pt\n)"),
+    double-arrow(10pt, 5pt, 5pt, 5pt),
+
+    raw(lang: "typst",
+        "#double-arrow(\n\tfill: green,\n\tstroke: none,\n\t30pt, 15pt,\n\t10pt, 15pt\n)"),
+    double-arrow(fill: green, stroke: none, 30pt, 15pt, 10pt, 15pt),
+)
+
+#colbreak()
+
 == Ship
 
 An abstract representation of a sailing ship.  The `gauge` argument
@@ -293,6 +325,8 @@ A six-sided dice with customizable colors.
     )
 )
 
+#pagebreak()
+
 = Typography
 
 Functions to apply font settings.
@@ -330,6 +364,8 @@ If the font supports it, turns on the `swsh`, `cv01`, etc. features.
         "#text(font: \"Honoria\",\n      [#swsh(\"S\")t#cv03(\"r\")ategos])"),
     text(font: "honoria")[#swsh("s")t#cv03("r")ategos],
 )
+
+#pagebreak()
 
 = Units
 
