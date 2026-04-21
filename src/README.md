@@ -16,6 +16,8 @@
   Man Of Tin's [Close Little Wars][clw]
 - `blackmoor-combat`: An attempt to reconstruct the combat system from
   Dave Arneson's "Blackmoor" campaign, the lost rules that lead to D&D.
+- `binder-clip-battalions`: Ultra-cheap ultra-simple wargames counters which
+  stand up with a simple 1.25 inch binder clip.
 
 [mgwiki]: https://www.ludism.org/mgwiki/HomePage
 [wgwminis]: https://warwithoutminis.blogspot.com/
